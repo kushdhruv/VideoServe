@@ -1,0 +1,14 @@
+{
+  "name": "basic3",
+  "version": "1.0.0",
+  "description": "backend with chai",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "Dhruv",
+  "license": "ISC"
+}
