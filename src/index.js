@@ -9,11 +9,13 @@ dotenv.config({
 import express from 'express';
 const app = express();
 
+const PORT = process.env.PORT || 8000;
+
 
 connectDB()
 .then(()=>{
-    app.listen(process.env.PORT || 8000,()=>{
-        console.log(`Server is running on port ${process.env.PORT}`);
+    app.listen(PORT, () => {
+        console.log(`Server is running on http://localhost:${PORT}`);
     })
 })
 .catch((err)=>{
