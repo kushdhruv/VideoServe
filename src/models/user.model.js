@@ -54,9 +54,9 @@ const userSchema=new Schema(
 )
 userSchema.pre("save", async function (next) {
     if(!this.isModified()) 
-        return next(); //is password is not changed...directly return null 
+        return next(); //if password is not changed...directly return null 
     
-    this.password=bcrypt.hash(this.password,10) //to encrypt password
+    this.password= await bcrypt.hash(this.password,10) //to encrypt password
     next();
 }) //when "funtion"(here it is save....so just before saving something on database it will run this) is going to perform  this middleware will do something just before that
 

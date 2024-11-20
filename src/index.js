@@ -1,5 +1,6 @@
 import dotenv from "dotenv" 
 import {connectDB} from "./db/indexDB.js"
+import {app} from './app.js'; // Import the app
 
 //THIS WILL ALLOW PORT TO EVERY FILE
 dotenv.config({
@@ -7,7 +8,7 @@ dotenv.config({
 })
 
 import express from 'express';
-const app = express();
+//const app = express();
 
 const PORT = process.env.PORT || 8000;
 
