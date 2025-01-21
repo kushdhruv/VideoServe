@@ -4,7 +4,7 @@ import {app} from './app.js'; // Import the app
 
 //THIS WILL ALLOW PORT TO EVERY FILE
 dotenv.config({
-    path:'../env'
+    path:'../.env'
 })
 
 import express from 'express';
