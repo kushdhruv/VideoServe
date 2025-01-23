@@ -1,5 +1,5 @@
 import mongoose , {Schema} from "mongoose";
-import jwr from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 
 const userSchema=new Schema(
@@ -21,7 +21,7 @@ const userSchema=new Schema(
             trim : true,
         },
 
-        fullname : {
+        fullName : {
             type : String,
             required : true,
             trim : true,
@@ -47,7 +47,7 @@ const userSchema=new Schema(
         refreshToken : {
             type : String,
         }
-    },
+     },
     {
         timestamps:true
     }
@@ -64,6 +64,9 @@ userSchema.methods.isPasswordCorrect = async function (password){
     return await bcrypt.compare(password,this.password)
 }            //.methods.name this allows to create a method called name and we can perform anything with this 
 
+// to generate token....tokens are used to authenticate user and to give access to user to do something
+
+//access token is used to access the user for a short period of time
 userSchema.methods.generateAccessToken = function (){
     return jwt.sign(
         {
@@ -78,6 +81,8 @@ userSchema.methods.generateAccessToken = function (){
         }
     )
 }
+//refresh token is used to refresh the access token when it expires 
+//jwt.sign is used to edit the token and to give access to user
 userSchema.methods.generateRefreshToken = function (){
     return jwt.sign(
         {
