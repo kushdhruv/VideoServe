@@ -15,8 +15,19 @@ A Node.js backend project built with Express, MongoDB, and Cloudinary for user m
 
 ## Project Structure
 
- ├── .env # Environment variables ├── package.json # Project metadata and dependencies ├── src/ │ ├── app.js # Express app setup │ ├── index.js # Entry point, server start │ ├── constants.js # App constants (e.g., DB name) │ ├── controllers/ # Route controllers (user logic) │ ├── db/ # Database connection logic │ ├── middlewares/ # Express middlewares (auth, multer) │ ├── models/ # Mongoose models (User, Video, Subscription) │ ├── routes/ # Express route definitions │ └── utils/ # Utility classes (ApiError, ApiResponse, etc.) └── public/ # Static files (uploads, temp
-
+├── .env # Environment variables
+├── package.json # Project metadata and dependencies
+├── src/
+│ ├── app.js # Express app setup
+│ ├── index.js # Entry point, server start
+│ ├── constants.js # App constants (e.g., DB name)
+│ ├── controllers/ # Route controllers (user logic)
+│ ├── db/ # Database connection logic
+│ ├── middlewares/ # Express middlewares (auth, multer)
+│ ├── models/ # Mongoose models (User, Video, Subscription)
+│ ├── routes/ # Express route definitions
+│ └── utils/ # Utility classes (ApiError, ApiResponse, etc.)
+└── public/ # Static files (uploads, temp)
 
 ## Getting Started
 
