@@ -22,5 +22,5 @@ export const verifyJWT =asyncHandler(async (req,res,next)=>{
     } catch (error) {
         throw new ApiError(401,"Invalid Token")
     }
-}) 
+})  
  //this middleware will be used to check if the user is authenticated or not
